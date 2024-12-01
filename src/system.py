@@ -14,6 +14,11 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.multiclass import OneVsRestClassifier as ORC
 import pandas as pd
 
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
+
 # Function to save images to the directory if they do not exist
 def save_images_if_not_exists(image_directory, save_directory):
     extensions = ('jpg', 'png', 'gif', 'jpeg', 'bmp')  # Define valid image extensions
