@@ -45,7 +45,7 @@ def get_landmarks(images, labels):
             points = np.array([[p.x, p.y] for p in predictor(gray, face).parts()])
             landmarks.append(compute_distances(points))
             new_labels.append(label)
-        if (idx + 1) % 50 == 0:
+        if (idx + 1) % 100 == 0:
             print(f"Processed {idx + 1} facial landmarks...")
     return np.array(landmarks), np.array(new_labels)
 
